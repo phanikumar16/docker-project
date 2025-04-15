@@ -1,8 +1,6 @@
-# Base image: Uses lightweight Nginx image
+# Use an official Nginx image to serve the static files
 FROM nginx:alpine
-
-# Copies all local files to Nginx's default directory
+# Copy the HTML, CSS, JS files into the Nginx container
 COPY . /usr/share/nginx/html
-
-#  Exposes port 80 for web traffic
+# Expose port 80 to access the app
 EXPOSE 80
